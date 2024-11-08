@@ -1,0 +1,92 @@
+.count {
+  color: grey;
+}
+
+.user-image {
+  max-width: 54px;
+  border-radius: 33px;
+  border: 1px solid grey;
+  margin: 5px 4px 6px 0;
+  font-size: 35px;
+}
+
+div.tagsinput {
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px;
+}
+
+
+.app-responses-container {
+  padding: 0;
+  .app-response-container {
+    margin-bottom: 20px;
+    .app-response-review-section{
+      display: flex;
+      i{
+        position: absolute;
+        top: 10px;
+        left: 24px;
+        color: gray;
+      }
+      .bootstrap-tagsinput{
+        padding-left: 31px;
+      }
+    }
+    .media, .media-body{
+      overflow: visible;
+    }
+  }
+  .media-heading.app-user-name {
+    margin-bottom: 6px;
+    margin-top: 5px;
+  }
+}
+
+.tag-label {
+  font-weight: bold;
+}
+
+
+.tags-holder {
+  margin-top: 6px;
+  padding-bottom: 6px;
+}
+
+.comments-list {
+  margin-bottom: 15px;
+  display: inline;
+}
+
+.tag {
+  border-radius: 5px;
+  padding: 2px 10px 2px 10px;
+  text-decoration: none;
+  background: #cde69c;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.media-body.passage {
+  margin-bottom: 15px;
+}
+
+.app-tag-review-holder {
+  font-size: xx-large;
+  a.app-tag-review-btn-blue:hover {
+    color: #cde69c;
+    cursor: pointer;
+  }
+  a.app-tag-review-btn-green {
+    color: #cde69c;
+  }
+}
+
+a.fa.fa-check-circle.app-tag-review-btn {
+  text-decoration: none;
+}
+
+.bootstrap-tagsinput {
+  width: 100%;
+}

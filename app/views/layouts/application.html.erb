@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tweetable</title>
+  <%= csrf_meta_tags %>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+</head>
+
+<body>
+<div class="container-fluid">
+  <% if logged_in? %>
+      <%= render :partial => "shared/top_nav_bar" %>
+      <div class="row app-main-content">
+	      <div class=" col-sm-2 col-md-2 app-sidebar-links-container">
+		      <%= render :partial => "shared/side_nav_bar" %>
+	      </div>
+        <div class="col-sm-10 col-md-10 app-main-body">
+          <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>"><%= value %></div>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+  <% else %>
+      <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+  <% end %>
+</div>
+
+</body>
+</html>
